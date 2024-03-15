@@ -1,8 +1,5 @@
 # Motoko Telefon Rehberi Projesi
 
-http://127.0.0.1:4943/?canisterId=bd3sg-teaaa-aaaaa-qaaba-cai&id=bkyz2-fmaaa-aaaaa-qaaaq-cai#insert 
-Projeyi bu adresten test edebilirsiniz.
-
 Bu proje, Motoko programlama dili ile Internet Computer Protocol (ICP) üzerinde geliştirilmiş basit bir telefon rehberi akıllı sözleşmesidir (aktör). Kullanıcıların isimlerine göre telefon girişleri eklemelerine ve sorgulamalarına olanak tanır.
 
 ## Proje Yapısı
