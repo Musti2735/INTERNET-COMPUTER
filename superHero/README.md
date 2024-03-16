@@ -1,8 +1,4 @@
 
-
-### Türkçe Versiyon:
-
-```markdown
 # Süper Kahramanlar Motoko Akıllı Sözleşmesi
 
 ## Genel Bakış
