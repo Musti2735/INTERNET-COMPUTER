@@ -1,59 +1,33 @@
-# token
+GPT
+GitHub'daki "token_transfer" projesi için bir README.md şablonu hazırlayacağım. Bu şablon, projenin Internet Computer platformunda token transferlerini nasıl gerçekleştireceğini açıklayan bir akıllı sözleşme olduğunu varsayarak oluşturulmuştur. Detaylar projenizin özelliklerine göre değişebilir, bu yüzden lütfen uygun gördüğünüz yerleri kendinize göre özelleştirin.
 
-Welcome to your new token project and to the internet computer development community. By default, creating a new project adds this README and some template files to your project directory. You can edit these template files to customize your project and to include your own code to speed up the development cycle.
+Internet Computer Token Transferi
+Bu repozituar, Internet Computer (IC) platformunda token transferlerini sağlayan bir akıllı sözleşme örneğini barındırmaktadır. Motoko programlama dili kullanılarak geliştirilmiş bu projede, kullanıcılar arası token transferleri nasıl gerçekleştirilebileceğine dair temel bir kılavuz sunulmaktadır.
 
-To get started, you might want to explore the project directory structure and the default configuration file. Working with this project in your development environment will not affect any production deployment or identity tokens.
+Özellikler
+Token Transferi: Kullanıcılar arasında token transferi gerçekleştirebilme.
+Bakiye Sorgulama: Kullanıcıların kendi token bakiyelerini sorgulayabilmesi.
+Güvenli Transfer: Transfer işlemlerinin güvenli bir şekilde gerçekleşmesini sağlama.
 
-To learn more before you start working with token, see the following documentation available online:
+Kullanım
+Akıllı sözleşmeyi kurduktan sonra aşağıdaki işlemleri gerçekleştirebilirsiniz:
 
-- [Quick Start](https://internetcomputer.org/docs/current/developer-docs/setup/deploy-locally)
-- [SDK Developer Tools](https://internetcomputer.org/docs/current/developer-docs/setup/install)
-- [Motoko Programming Language Guide](https://internetcomputer.org/docs/current/motoko/main/motoko)
-- [Motoko Language Quick Reference](https://internetcomputer.org/docs/current/motoko/main/language-manual)
+Token Transferi Yapma: transfer fonksiyonunu çağırarak başka bir kullanıcıya token transferi yapabilirsiniz.
+Bakiye Sorgulama: balanceOf fonksiyonu ile herhangi bir kullanıcının token bakiyesini sorgulayabilirsiniz.
+GPT
+For your "token_transfer" project hosted on GitHub, which seems to focus on token transactions on the Internet Computer platform using Motoko, here's a structured README.md template in English. This template assumes the project is a basic implementation of token transfers and can be customized to fit the specifics of your project.
 
-If you want to start working on your project right away, you might want to try the following commands:
+Internet Computer Token Transfer
+This repository contains a Motoko-based smart contract example for facilitating token transfers on the Internet Computer (IC) platform. Designed to demonstrate the fundamentals of token transactions between users, this project serves as a guide to implementing basic token transfer functionalities within the IC ecosystem.
 
-```bash
-cd token/
-dfx help
-dfx canister --help
-```
+Features
+Token Transfer: Enables users to transfer tokens to one another.
+Balance Inquiry: Allows users to query their token balances.
+Secure Transactions: Ensures that all transfer operations are securely executed.
+Usage
+Once you have the smart contract set up, you can perform the following operations:
 
-## Running the project locally
+Perform Token Transfers: Use the transfer function to execute token transfers to another user.
+Query Balances: Utilize the balanceOf function to inquire about any user's token balance.
+For detailed examples and API documentation, please refer to the source code and accompanying comments.
 
-If you want to test your project locally, you can use the following commands:
-
-```bash
-# Starts the replica, running in the background
-dfx start --background
-
-# Deploys your canisters to the replica and generates your candid interface
-dfx deploy
-```
-
-Once the job completes, your application will be available at `http://localhost:4943?canisterId={asset_canister_id}`.
-
-If you have made changes to your backend canister, you can generate a new candid interface with
-
-```bash
-npm run generate
-```
-
-at any time. This is recommended before starting the frontend development server, and will be run automatically any time you run `dfx deploy`.
-
-If you are making frontend changes, you can start a development server with
-
-```bash
-npm start
-```
-
-Which will start a server at `http://localhost:8080`, proxying API requests to the replica at port 4943.
-
-### Note on frontend environment variables
-
-If you are hosting frontend code somewhere without using DFX, you may need to make one of the following adjustments to ensure your project does not fetch the root key in production:
-
-- set`DFX_NETWORK` to `ic` if you are using Webpack
-- use your own preferred method to replace `process.env.DFX_NETWORK` in the autogenerated declarations
-  - Setting `canisters -> {asset_canister_id} -> declarations -> env_override to a string` in `dfx.json` will replace `process.env.DFX_NETWORK` with the string in the autogenerated declarations
-- Write your own `createActor` constructor
